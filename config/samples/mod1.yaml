@@ -1,0 +1,12 @@
+apiVersion: slabs.forge/v1
+kind: Module
+metadata:
+  name: module1
+spec:
+  interfaces: 
+    - id: interface1
+      type: postgres
+    - id: interface1
+      type: mariadb
+  context: ABCDHJKLL
+

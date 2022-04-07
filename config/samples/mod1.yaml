@@ -3,10 +3,10 @@ kind: Module
 metadata:
   name: module1
 spec:
-  interfaces: 
+  links: 
     - id: interface1
       type: postgres
-    - id: interface1
+    - id: interface2
       type: mariadb
   context: ABCDHJKLL
 

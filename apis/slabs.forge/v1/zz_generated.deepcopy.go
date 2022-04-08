@@ -83,7 +83,7 @@ func (in *ModuleLink) DeepCopyObject() runtime.Object {
 func (in *ModuleLinkList) DeepCopyInto(out *ModuleLinkList) {
 	*out = *in
 	out.TypeMeta = in.TypeMeta
-	in.ObjectMeta.DeepCopyInto(&out.ObjectMeta)
+	in.ListMeta.DeepCopyInto(&out.ListMeta)
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]ModuleLink, len(*in))
@@ -133,7 +133,7 @@ func (in *ModuleLinkSpec) DeepCopy() *ModuleLinkSpec {
 func (in *ModuleList) DeepCopyInto(out *ModuleList) {
 	*out = *in
 	out.TypeMeta = in.TypeMeta
-	in.ObjectMeta.DeepCopyInto(&out.ObjectMeta)
+	in.ListMeta.DeepCopyInto(&out.ListMeta)
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]Module, len(*in))
